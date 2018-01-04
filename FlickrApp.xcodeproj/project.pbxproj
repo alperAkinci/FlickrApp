@@ -18,6 +18,8 @@
 		E1566E241FFBDFF100D70DEE /* PhotoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1566E221FFBDFF100D70DEE /* PhotoTableCell.xib */; };
 		E1566E281FFBE41B00D70DEE /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1566E271FFBE41B00D70DEE /* PhotoViewModel.swift */; };
 		E1566E2B1FFBE5A100D70DEE /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1566E2A1FFBE5A100D70DEE /* FlickrAPI.swift */; };
+		E1DC1CEC1FFE52B100792C5E /* PhotosInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC1CEB1FFE52B100792C5E /* PhotosInfo.swift */; };
+		E1DC1CEE1FFE575800792C5E /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC1CED1FFE575800792C5E /* PhotoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E1566E221FFBDFF100D70DEE /* PhotoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableCell.xib; sourceTree = "<group>"; };
 		E1566E271FFBE41B00D70DEE /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		E1566E2A1FFBE5A100D70DEE /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		E1DC1CEB1FFE52B100792C5E /* PhotosInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosInfo.swift; sourceTree = "<group>"; };
+		E1DC1CED1FFE575800792C5E /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E1566E171FFBDC3B00D70DEE /* Application */,
+				E1DC1CEA1FFE519700792C5E /* Model */,
 				E1566E1C1FFBDF8200D70DEE /* Views */,
 				E1566E1D1FFBDF8E00D70DEE /* ViewModels */,
 				E1566E161FFBDBCB00D70DEE /* Networking  */,
@@ -149,6 +154,15 @@
 				E1566E2A1FFBE5A100D70DEE /* FlickrAPI.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		E1DC1CEA1FFE519700792C5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC1CEB1FFE52B100792C5E /* PhotosInfo.swift */,
+				E1DC1CED1FFE575800792C5E /* PhotoItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +312,10 @@
 				E1566E281FFBE41B00D70DEE /* PhotoViewModel.swift in Sources */,
 				E1566E071FFBDA7D00D70DEE /* PhotoViewController.swift in Sources */,
 				E1566E231FFBDFF100D70DEE /* PhotoTableCell.swift in Sources */,
+				E1DC1CEE1FFE575800792C5E /* PhotoItem.swift in Sources */,
 				E1566E2B1FFBE5A100D70DEE /* FlickrAPI.swift in Sources */,
 				E1566E051FFBDA7D00D70DEE /* AppDelegate.swift in Sources */,
+				E1DC1CEC1FFE52B100792C5E /* PhotosInfo.swift in Sources */,
 				E1566E1B1FFBDC7A00D70DEE /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
