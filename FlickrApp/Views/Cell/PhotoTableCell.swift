@@ -7,18 +7,27 @@
 //
 
 import UIKit
+import RxSwift
 
 class PhotoTableCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private var disposeBag = DisposeBag()
+
+    var viewModel: PhotosTableViewModelType? {
+        willSet {
+            disposeBag = DisposeBag()
+        }
+        didSet {
+            setupBindings()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func setupBindings() {
+        guard let viewModel = viewModel, let titleLabel = titleLabel else { return }
 
-        // Configure the view for the selected state
+        viewModel.title.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
     }
     
 }

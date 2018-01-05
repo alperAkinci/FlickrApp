@@ -7,18 +7,37 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import Moya
 
 class PhotoViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
+    let disposeBag = DisposeBag()
+    var provider: MoyaProvider<Flickr>!
+    var viewModel: PhotoViewModel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupBindings()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    func setupBindings() {
+        // Firstly create Provider
+        provider = MoyaProvider<Flickr>()
 
+        viewModel = PhotoViewModel()
+
+        viewModel
+            .photosObservable
+            .bind(to: tableView.rx.items){ tableView, row, item in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: IndexPath(row: row, section: 0)) as! PhotoTableCell
+            cell.viewModel = item
+            return cell
+            }.disposed(by: disposeBag)
+
+    }
 }
 

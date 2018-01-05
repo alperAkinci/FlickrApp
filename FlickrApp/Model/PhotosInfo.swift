@@ -18,10 +18,10 @@ struct PhotosInfo: Mappable {
     var total: Int
 
     init(map: Mapper) throws {
-        try page = map.from("photos.page")
-        try pages = map.from("photos.pages")
-        try perPage = map.from("photos.perPage")
-        photo = map.optionalFrom("photos.photo")
-        try total = map.from("photos.total")
+        try page = map.from("page")
+        try pages = map.from("pages")
+        try perPage = map.from("perPage")
+        photo = map.optionalFrom("photo")
+        try total = map.from("total")
     }
 }
