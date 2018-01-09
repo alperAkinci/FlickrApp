@@ -76,4 +76,8 @@ extension Flickr: TargetType {
     var headers: [String : String]? {
         return nil
     }
+    
+    func url() -> URL {
+        return self.baseURL.appendingPathComponent(self.path)
+    }
 }

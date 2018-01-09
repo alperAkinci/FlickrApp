@@ -21,7 +21,13 @@ class PhotoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "PhotoTableCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "PhotoCell")
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         setupBindings()
+        viewModel?.searchPhoto()
     }
 
     func setupBindings() {

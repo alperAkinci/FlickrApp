@@ -14,5 +14,5 @@ import Foundation
 class Config {
     static let SERVER_URL = "https://api.flickr.com"
     static let FLICKRURL = "https://farm5.static.flickr.com"
-    static let FLICKRAPIKEY = ""
+    static let FLICKRAPIKEY = "98dd3d31636e144942b7bc3c24eabc1e"
 }

@@ -11,6 +11,7 @@ import RxSwift
 
 class PhotoTableCell: UITableViewCell {
     
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
 
     private var disposeBag = DisposeBag()
@@ -23,11 +24,16 @@ class PhotoTableCell: UITableViewCell {
             setupBindings()
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        photoImageView.kf.cancelDownloadTask()
+        photoImageView.image = nil
+    }
 
     func setupBindings() {
         guard let viewModel = viewModel, let titleLabel = titleLabel else { return }
-
         viewModel.title.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
+        photoImageView.download(imageURL: viewModel.imageURL)
     }
-    
 }

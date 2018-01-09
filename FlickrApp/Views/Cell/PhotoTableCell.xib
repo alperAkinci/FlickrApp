@@ -21,10 +21,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-oS-erD">
-                        <rect key="frame" x="32" y="23" width="356" height="257"/>
+                        <rect key="frame" x="32" y="23" width="356" height="240"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="SzF-Um-398"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label Label Label Label Label Label Label Label Label Label Label " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msg-e5-SkL">
-                        <rect key="frame" x="32" y="288" width="356" height="41"/>
+                        <rect key="frame" x="32" y="271" width="356" height="58"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -42,6 +45,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="photoImageView" destination="CjH-oS-erD" id="cbw-vw-Pb2"/>
                 <outlet property="titleLabel" destination="msg-e5-SkL" id="yDA-Ly-ZV6"/>
             </connections>
             <point key="canvasLocation" x="81" y="205"/>

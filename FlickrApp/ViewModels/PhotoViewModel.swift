@@ -27,7 +27,6 @@ final class PhotoViewModel: PhotoViewModelType {
 
     lazy var photosObservable: Observable<[PhotosTableViewModelType]> = self.photos.asObservable().map { $0.map { $0.1 } }
 
-
     func searchPhoto() {
         searchQuery
             .observeOn(MainScheduler.instance)
@@ -43,11 +42,13 @@ final class PhotoViewModel: PhotoViewModelType {
             .request(Flickr.photoList(searchQuery: keyword))
             .debug()
             .asObservable()
-            .mapOptional(to: [PhotoItem].self, keyPath: "photos.photo")
-            .subscribe({ (photoItemsElement) in
-                let photoItems = photoItemsElement.element!!
-                self.photos.value = (photoItems.map({ ($0, PhotoTableViewModel(item: $0)) }))
-            }).disposed(by: disposeBag)
+            .map(to: [PhotoItem].self, keyPath: "photos.photo")
+            .subscribe({ (photoItems) in
+                if let elements = photoItems.element {
+                    self.photos.value = (elements.map({ ($0, PhotoTableViewModel(item: $0))}))
+                }
+            })
+            .disposed(by: disposeBag)
     }
 
     func testPhotoRequest() {

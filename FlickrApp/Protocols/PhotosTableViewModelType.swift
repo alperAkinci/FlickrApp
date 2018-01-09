@@ -10,4 +10,5 @@ import RxSwift
 
 protocol PhotosTableViewModelType {
     var title: Observable<String> { get }
+    var imageURL: URL { get }
 }

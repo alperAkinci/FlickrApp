@@ -18,6 +18,7 @@
 		E1566E241FFBDFF100D70DEE /* PhotoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1566E221FFBDFF100D70DEE /* PhotoTableCell.xib */; };
 		E1566E281FFBE41B00D70DEE /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1566E271FFBE41B00D70DEE /* PhotoViewModel.swift */; };
 		E1566E2B1FFBE5A100D70DEE /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1566E2A1FFBE5A100D70DEE /* FlickrAPI.swift */; };
+		E19A4E862004CB7900FB462C /* UIImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A4E852004CB7900FB462C /* UIImage+Kingfisher.swift */; };
 		E1D1D6791FFFCA7A00489822 /* PhotosTableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1D6781FFFCA7A00489822 /* PhotosTableViewModelType.swift */; };
 		E1D1D67B1FFFD57A00489822 /* PhotoTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1D67A1FFFD57A00489822 /* PhotoTableViewModel.swift */; };
 		E1DC1CEC1FFE52B100792C5E /* PhotosInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC1CEB1FFE52B100792C5E /* PhotosInfo.swift */; };
@@ -40,6 +41,7 @@
 		E1566E221FFBDFF100D70DEE /* PhotoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableCell.xib; sourceTree = "<group>"; };
 		E1566E271FFBE41B00D70DEE /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		E1566E2A1FFBE5A100D70DEE /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		E19A4E852004CB7900FB462C /* UIImage+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Kingfisher.swift"; sourceTree = "<group>"; };
 		E1D1D6781FFFCA7A00489822 /* PhotosTableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewModelType.swift; sourceTree = "<group>"; };
 		E1D1D67A1FFFD57A00489822 /* PhotoTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewModel.swift; sourceTree = "<group>"; };
 		E1DC1CEB1FFE52B100792C5E /* PhotosInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosInfo.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				E1566E1C1FFBDF8200D70DEE /* Views */,
 				E1566E1D1FFBDF8E00D70DEE /* ViewModels */,
 				E1D1D6771FFFCA2900489822 /* Protocols */,
+				E19A4E842004CB4000FB462C /* Extensions */,
 				E1566E161FFBDBCB00D70DEE /* Networking  */,
 				E1566E081FFBDA7D00D70DEE /* Main.storyboard */,
 				E1566E0B1FFBDA7D00D70DEE /* Assets.xcassets */,
@@ -160,6 +163,14 @@
 				E1566E2A1FFBE5A100D70DEE /* FlickrAPI.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		E19A4E842004CB4000FB462C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E19A4E852004CB7900FB462C /* UIImage+Kingfisher.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E1D1D6771FFFCA2900489822 /* Protocols */ = {
@@ -259,6 +270,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlickrApp/Pods-FlickrApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
@@ -270,6 +282,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
@@ -328,6 +341,7 @@
 				E1566E231FFBDFF100D70DEE /* PhotoTableCell.swift in Sources */,
 				E1DC1CEE1FFE575800792C5E /* PhotoItem.swift in Sources */,
 				E1D1D67B1FFFD57A00489822 /* PhotoTableViewModel.swift in Sources */,
+				E19A4E862004CB7900FB462C /* UIImage+Kingfisher.swift in Sources */,
 				E1D1D6791FFFCA7A00489822 /* PhotosTableViewModelType.swift in Sources */,
 				E1566E2B1FFBE5A100D70DEE /* FlickrAPI.swift in Sources */,
 				E1566E051FFBDA7D00D70DEE /* AppDelegate.swift in Sources */,
